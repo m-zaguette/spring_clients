@@ -7,13 +7,13 @@ import lombok.Getter;
 
 public class ApiErrors {
     @Getter
-    private List<String> _erros;
+    private List<String> errors;
 
-    public ApiErrors(List<String> _erros) {
-        this._erros = _erros;
+    public ApiErrors(List<String> errors) {
+        this.errors = errors;
     }
 
     public ApiErrors(String message){
-        this._erros = Arrays.asList(message);
+        this.errors = Arrays.asList(message);
     }
 }
