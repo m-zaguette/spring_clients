@@ -1,14 +1,17 @@
 package com.example.clients.model.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class ServiceEntity {
+public class ProvidedServiceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,4 +25,8 @@ public class ServiceEntity {
 
     @Column
     private BigDecimal value;
+
+    @Column
+    @JsonFormat(pattern = "dd/MM/YYYY")
+    private LocalDate date;
 }

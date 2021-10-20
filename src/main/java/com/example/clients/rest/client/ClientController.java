@@ -1,4 +1,4 @@
-package com.example.clients.rest;
+package com.example.clients.rest.client;
 
 import java.util.List;
 
